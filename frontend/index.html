@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>Mi Asistente AI</title>
+<link rel="stylesheet" href="style.css" />
+
+<!-- Motor de render (gratis, CDN) -->
+<script src="https://cdn.jsdelivr.net/npm/pixi.js@6.5.2/dist/browser/pixi.min.js"></script>
+<script src="https://cubism.live2d.com/sdk-web/cubismcore/live2dcubismcore.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pixi-live2d-display@0.4.0/dist/cubism4.min.js"></script>
+
+</head>
+<body>
+  <!-- Canvas para el avatar virtual -->
+  <div id="stage-wrap">
+    <canvas id="canvas"></canvas>
+    <div id="subtitle"></div>
+  </div>
+
+  <div id="controls">
+    <button id="mic-btn"> Mantén presionado para hablar</button>
+    <form id="text-form">
+      <input id="text-input" placeholder="...o escribe aquí" autocomplete="off" />
+      <button type="submit">Enviar</button>
+    </form>
+    <button id="wake-btn" title="Activar o desactivar el modo manos libres"> Activar palabra clave</button>
+    <button id="reset-btn" title="Borrar memoria de la conversación"> Reiniciar</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

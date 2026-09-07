@@ -1,0 +1,70 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  height: 100vh;
+  background: radial-gradient(circle at 50% 20%, #1b2340, #05060d 70%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+}
+
+#stage-wrap {
+  position: relative;
+  width: 480px;
+  height: min(640px, calc(100vh - 180px));
+  min-height: 360px;
+  flex: 0 1 640px;
+  background: rgba(255,255,255,0.03);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+#canvas {
+  width: 100%;
+  height: 100%;
+}
+
+#subtitle {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: #7CFFCB;
+  text-shadow: 0 0 6px black, 0 0 6px black;
+  min-height: 28px;
+}
+
+#controls {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+button {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  background: #7CFFCB;
+  color: #05060d;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#mic-btn.recording {
+  background: #ff5c7c;
+  color: white;
+}
+
+#text-input {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  width: 220px;
+}
